@@ -5,3 +5,4 @@ keras_hub
 coral-ordinal
 huggingface_hub
 numpy
+tensorflow
