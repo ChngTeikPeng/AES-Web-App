@@ -1,0 +1,7 @@
+streamlit
+transformers
+keras
+keras_hub
+coral-ordinal
+huggingface_hub
+numpy
