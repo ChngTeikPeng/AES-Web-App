@@ -6,3 +6,4 @@ coral-ordinal
 huggingface_hub
 numpy
 tensorflow
+google-generativeai
