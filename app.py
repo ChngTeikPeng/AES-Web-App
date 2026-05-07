@@ -74,7 +74,7 @@ if st.button("Score Essay"):
         with st.spinner("Gemini is analyzing your writing..."):
             try:
                 # Initialize the Gemini model
-                tutor_model = genai.GenerativeModel('gemini-1.5-flash')
+                tutor_model = genai.GenerativeModel('gemini-2.5-flash')
                 
                 # The prompt telling Gemini exactly how to behave
                 prompt = f"""
