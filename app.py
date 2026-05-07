@@ -30,7 +30,7 @@ tokenizer, model = load_model_and_tokenizer()
 
 # --- 2. THE USER INTERFACE ---
 st.title("新民华中自动作文评分系统")
-st.header("SMJK Sin Min Automated Essay Scoring System")
+st.subheader("SMJK Sin Min Automated Essay Scoring System")
 st.write("Powered by a fine-tuned DistilBERT model.")
 
 user_essay = st.text_area("Essay Text:", height=300, placeholder="Please type your essay here.")
