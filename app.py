@@ -88,7 +88,7 @@ if st.button("Score Essay"):
                 2. Identify specific grammatical errors (show the wrong sentences and correct sentences).
                 3. Give them one specific, actionable tip to reach a Band {final_score + 1}.
                 4. Make sure your language and sentence structures are easily understood (Appropriate for 13 year-old students).
-                5. Remember, the highest band is 6. So if the student gets a band 6, just congratulate the student. 
+                5. Remember, the highest band is 6. So if the student gets a band 6, skip instruction "3". Do not provide actionable tip to reach a Band {final_score + 1}. 
                 
                 Student's Essay:
                 "{user_essay}"
