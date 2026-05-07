@@ -71,38 +71,37 @@ if st.button("Score Essay"):
             st.markdown("---") # Adds a nice visual divider line
         
         # Trigger the LLM Feedback Loop
-        if st.button("Get Detailed Feedback"):
-            with st.spinner("Gemini is analyzing your writing..."):
-                try:
-                    # Initialize the Gemini model
-                    tutor_model = genai.GenerativeModel('gemini-1.5-flash')
-                    
-                    # The prompt telling Gemini exactly how to behave
-                    prompt = f"""
-                    You are an expert English teacher at SMJK Sin Min. 
-                    
-                    My highly accurate DistilBERT-based automated essay scoring model has already graded this essay and awarded it a Band {final_score} out of 6. 
-                    DO NOT change this score. DO NOT grade the essay yourself.
-                    
-                    Your task is to provide 3 short paragraphs of encouraging feedback to the student:
-                    1. Praise what they did well based on a Band {final_score} level.
-                    2. Identify specific grammatical errors.
-                    3. Give them one specific, actionable tip to reach a Band {final_score + 1}.
-                    4. Make sure your language and sentence structures are easily understood (Appropriate for 13 year-old students). 
-                    
-                    Student's Essay:
-                    "{user_essay}"
-                    """
-                    
-                    # Generate and display the feedback
-                    response = tutor_model.generate_content(prompt)
-                    
-                    st.subheader("Teacher's Feedback:")
-                    st.write(response.text)
-                    
-                except Exception as e:
-                    st.error(f"Failed to generate feedback. Error: {e}")
-            
-            # Keep the raw output hidden in an expander for debugging
-            with st.expander("View Raw Model Output"):
-                st.write(raw_predictions)
+        with st.spinner("Gemini is analyzing your writing..."):
+            try:
+                # Initialize the Gemini model
+                tutor_model = genai.GenerativeModel('gemini-1.5-flash')
+                
+                # The prompt telling Gemini exactly how to behave
+                prompt = f"""
+                You are an expert English teacher at SMJK Sin Min. 
+                
+                My highly accurate DistilBERT-based automated essay scoring model has already graded this essay and awarded it a Band {final_score} out of 6. 
+                DO NOT change this score. DO NOT grade the essay yourself.
+                
+                Your task is to provide 3 short paragraphs of encouraging feedback to the student:
+                1. Praise what they did well based on a Band {final_score} level.
+                2. Identify specific grammatical errors.
+                3. Give them one specific, actionable tip to reach a Band {final_score + 1}.
+                4. Make sure your language and sentence structures are easily understood (Appropriate for 13 year-old students). 
+                
+                Student's Essay:
+                "{user_essay}"
+                """
+                
+                # Generate and display the feedback
+                response = tutor_model.generate_content(prompt)
+                
+                st.subheader("Teacher's Feedback:")
+                st.write(response.text)
+                
+            except Exception as e:
+                st.error(f"Failed to generate feedback. Error: {e}")
+        
+        # Keep the raw output hidden in an expander for debugging
+        with st.expander("View Raw Model Output"):
+            st.write(raw_predictions)
