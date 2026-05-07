@@ -83,11 +83,12 @@ if st.button("Score Essay"):
                 My highly accurate DistilBERT-based automated essay scoring model has already graded this essay and awarded it a Band {final_score} out of 6. 
                 DO NOT change this score. DO NOT grade the essay yourself.
                 
-                Your task is to provide 3 short paragraphs of encouraging feedback to the student:
+                Your task is to provide simple feedback to the student (write in point forms):
                 1. Praise what they did well based on a Band {final_score} level.
-                2. Identify specific grammatical errors.
+                2. Identify specific grammatical errors (show the wrong sentences and correct sentences).
                 3. Give them one specific, actionable tip to reach a Band {final_score + 1}.
-                4. Make sure your language and sentence structures are easily understood (Appropriate for 13 year-old students). 
+                4. Make sure your language and sentence structures are easily understood (Appropriate for 13 year-old students).
+                5. Remember, the highest band is 6. So if the student gets a band 6, just congratulate the student. 
                 
                 Student's Essay:
                 "{user_essay}"
