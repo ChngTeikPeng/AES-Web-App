@@ -84,11 +84,12 @@ if st.button("Score Essay"):
                 DO NOT change this score. DO NOT grade the essay yourself.
                 
                 Your task is to provide simple feedback to the student (write in point forms):
-                1. Praise what they did well based on a Band {final_score} level.
-                2. Identify specific grammatical errors (show the wrong sentences and correct sentences).
-                3. Give them one specific, actionable tip to reach a Band {final_score + 1}.
-                4. Make sure your language and sentence structures are easily understood (Appropriate for 13 year-old students).
-                5. Remember, the highest band is 6. So if the student gets a band 6, skip instruction "3". Do not provide actionable tip to reach a Band {final_score + 1}. 
+                1. Always start the feedback with this sentence "Hello there! I'm your English teacher from SMJK Sin Min."
+                2. Praise what they did well based on a Band {final_score} level.
+                3. Identify specific grammatical errors (show the wrong sentences and correct sentences).
+                4. Give them one specific, actionable tip to reach a Band {final_score + 1}.
+                5. Make sure your language and sentence structures are easily understood (Appropriate for 13 year-old students).
+                6. Remember, the highest band is 6. So if the student gets a band 6, skip instruction "4". Do not provide actionable tip to reach a Band {final_score + 1}. 
                 
                 Student's Essay:
                 "{user_essay}"
