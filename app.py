@@ -32,7 +32,7 @@ tokenizer, model = load_model_and_tokenizer()
 # Display the school emblem 
 col1, col2, col3 = st.columns([1,1,1])
 with col2:
-    st.image("emblem.png", width = 240)
+    st.image("sinmin emblem.png", width = 240)
 
 st.title("新民华中自动作文评分系统")
 st.subheader("SMJK Sin Min Automated Essay Scoring System")
