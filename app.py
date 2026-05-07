@@ -34,7 +34,7 @@ col1, col2, col3 = st.columns([1,1,1])
 with col2:
     st.image("emblem.png", width = 240)
 
-st.title("新民华中自动作文评分系统")
+st.markdown("<h1 style='text-align: center;'>新民华中自动作文评分系统</h1>", unsafe_allow_html=True)
 st.subheader("SMJK Sin Min Automated Essay Scoring System")
 st.write("Powered by a fine-tuned DistilBERT model.")
 
