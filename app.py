@@ -29,6 +29,9 @@ def load_model_and_tokenizer():
 tokenizer, model = load_model_and_tokenizer()
 
 # --- 2. THE USER INTERFACE ---
+# Display the school emblem 
+st.image("sin min.jpg", width = 120)
+
 st.title("新民华中自动作文评分系统")
 st.subheader("SMJK Sin Min Automated Essay Scoring System")
 st.write("Powered by a fine-tuned DistilBERT model.")
