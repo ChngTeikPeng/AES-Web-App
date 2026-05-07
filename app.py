@@ -29,15 +29,22 @@ def load_model_and_tokenizer():
 tokenizer, model = load_model_and_tokenizer()
 
 # --- 2. THE USER INTERFACE ---
-st.title("Automated Essay Scoring System")
-st.write("Powered by a fine-tuned DistilBERT model. Paste an essay below to evaluate it.")
+st.title("新民华中自动作文评分系统")
+st.title("SMJK Sin Min Automated Essay Scoring System")
+st.write("Powered by a fine-tuned DistilBERT model.")
 
-user_essay = st.text_area("Essay Text:", height=300, placeholder="Type or paste the student's essay here...")
+user_essay = st.text_area("Essay Text:", height=300, placeholder="Please type your essay here.")
 
 # --- 3. THE SCORING LOGIC ---
 if st.button("Score Essay"):
+    # count the words first
+    word_count = len(user_essay.split())
+
+    #check if it is empty
     if user_essay.strip() == "":
         st.warning("Please enter some text before scoring.")
+    elif word_count <80: 
+        st.error(f"Error: Your essay is only {word_count} words long. Please submit a complete response of at least 80 words for an accurate evaluation ")    
     else:
         with st.spinner("Analyzing essay..."):
             
