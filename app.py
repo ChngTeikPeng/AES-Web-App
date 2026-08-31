@@ -34,8 +34,8 @@ col1, col2, col3 = st.columns([1,1,1])
 with col2:
     st.image("emblem.png", width = 240)
 
-st.markdown("<h1 style='text-align: center;'>新民华中自动作文评分系统</h1>", unsafe_allow_html=True)
-st.markdown("<h3 style='text-align: center;'>SMJK Sin Min Automated Essay Scoring System</h3>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>巴东忽刹国民型华文小学自动作文评分系统</h1>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center;'>SJKC Padang Besar Utara Automated Essay Scoring System</h3>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Powered by a fine-tuned DistilBERT model.</p>", unsafe_allow_html=True)
 
 user_essay = st.text_area("Essay Text:", height=300, placeholder="Please type your essay here.")
