@@ -83,7 +83,7 @@ if st.button("Score Essay"):
             st.markdown("---") # Adds a nice visual divider line
         
         # Trigger the LLM Feedback Loop
-        with st.spinner("Gemini is analyzing your writing..."):
+        with st.spinner("稍等。老师正在评价你的作文..."):
             try:
                 # Initialize the Gemini model
                 tutor_model = genai.GenerativeModel('gemini-2.5-flash')
